@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    
+    @include media-breakpoint-down(md) {
+        &.nav-is-open {
+            overflow: hidden;
+        }
+    }
+}
+
+.ag-container {
+
+}

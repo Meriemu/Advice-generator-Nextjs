@@ -1,0 +1,34 @@
+// var-custom.scss -- Variables for project
+
+// This map is used for loops (buttons, text-color, bg-color)
+$project-colors: (
+    "lightCyan": hsl(193, 38%, 86%),
+    "neonGreen": hsl(150, 100%, 66%),
+    "GrayishBlue": hsl(217, 19%, 38%),
+    "DarkGrayishBlue": hsl(217, 19%, 24%),
+    "DarkBlue": hsl(218, 23%, 16%),
+);
+
+// Font weight
+$fw-light:      300;
+$fw-regular:    400;
+$fw-medium:     500;
+$fw-semiBold:   600;
+$fw-bold:       700;
+$fw-extraBold:  800;
+$fw-black:      900;
+
+$typo-familles-weight: (
+    "light": $fw-light,
+    "regular": $fw-regular,
+    "medium": $fw-medium,
+    "semiBold": $fw-semiBold,
+    "bold": $fw-bold,
+    "extraBold": $fw-extraBold,
+    "black": $fw-black,
+);
+
+// Typo
+$h1-font-size-desktop: 3.5rem;
+
+$h1-font-size-mobile: 2.5rem;
