@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Box = () => {
+const Box = ( { handleClick, advice, AdviecId }) => {
+
   return (
     <div className='ag-box'>
-      <p> The box</p>
+      <p className='ag-advice__nb'> Advice #{ AdviecId }</p>
+      <h1 className='ag-advice__text'> 
+      “ {advice} ”
+      </h1>
+
+      <button className='ag-advice__btn' onClick={handleClick}></button>
     </div>
   )
 }

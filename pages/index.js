@@ -1,8 +1,27 @@
+import React, { useState, useEffect, useCallback  } from 'react'
 import Head from 'next/head'
-// import Image from 'next/image'
 import Box from '../components/Box'
 
-export default function Home() {
+ 
+const Home = () => {
+  const [advice, setAdvice] = useState({});
+  const [renderDone, setRenderDone] = useState(false);
+
+  const handleClick = useCallback (async () => {
+    try {
+      const res = await fetch("https://api.adviceslip.com/advice");
+      const data = await res.json();
+      setAdvice ( data.slip ); 
+      setRenderDone(true);
+
+    } catch (err) {
+      console.log(err);
+    }
+  },[advice])
+
+  useEffect(() => {
+    handleClick();
+  }, []);
   return (
     <>
       <Head>
@@ -10,8 +29,10 @@ export default function Home() {
         <meta name="description" content="Advice generator app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Box/>
+      { renderDone  && <Box handleClick={handleClick} advice={advice.advice} AdviecId={advice.id} key={advice.id} /> }
+       
     </>
   )
 }
+
+export default Home

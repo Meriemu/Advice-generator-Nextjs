@@ -1,13 +1,9 @@
-// var-custom.scss -- Variables for project
+$ag_lightCyan: hsl(193, 38%, 86%);
+$ag_neonGreen: hsl(150, 100%, 66%);
+$ag_grayishBlue: hsl(217, 19%, 38%);
+$ag_darkGrayishBlue: hsl(217, 19%, 24%);
+$ag_darkBlue: hsl(218, 23%, 16%);
 
-// This map is used for loops (buttons, text-color, bg-color)
-$project-colors: (
-    "lightCyan": hsl(193, 38%, 86%),
-    "neonGreen": hsl(150, 100%, 66%),
-    "GrayishBlue": hsl(217, 19%, 38%),
-    "DarkGrayishBlue": hsl(217, 19%, 24%),
-    "DarkBlue": hsl(218, 23%, 16%),
-);
 
 // Font weight
 $fw-light:      300;
@@ -29,6 +25,6 @@ $typo-familles-weight: (
 );
 
 // Typo
-$h1-font-size-desktop: 3.5rem;
+$h1-font-size-desktop: 2rem;
 
-$h1-font-size-mobile: 2.5rem;
+$h1-font-size-mobile: 1.5rem;

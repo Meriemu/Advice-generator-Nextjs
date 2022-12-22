@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <style jsx global>{`
-        html {
+        html * {
           font-family: ${manrope.style.fontFamily};
         }
       `}</style>
